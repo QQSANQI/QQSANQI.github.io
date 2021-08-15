@@ -1,0 +1,90 @@
+
+:root{
+   --sd: 2px 2px 3px black;
+   
+    }
+@font-face{
+    font-family:title;
+    src: url("fronts/title.ttf");
+    }
+
+
+/*elements区*/
+/*body div,p,span.jianjie{
+    border-style:solid;
+    border-color:#FF5C2E;
+    
+}*/
+header img{
+  vertical-align:top;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  text-shadow: var(--sd);
+    }
+div#foods div{
+    width: 50px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 6px;
+    box-shadow: var(--sd);
+    }
+
+div#foods img#sp{
+        width: 50px;
+        height: 50px;
+        z-index: -1;
+        }
+div#foods a:link,a:visited{
+    color:#FFFFFF;
+    text-align: center;
+    text-decoration: none;
+    }
+div#foods a:hover,a:active{
+
+
+    }
+div#foods img#hover{
+    z-index: 1;
+    position:relative;
+    bottom: 10px;
+    }
+        
+        
+ /*class区*/       
+.header{
+    background-color:#BBBBBB;
+    color: white;
+    text-shadow: var(--sd);
+}
+.jianjie
+{
+    color: #000000;
+    text-align: center;
+    display: block;
+    font-family: title;
+    font-size:5px;
+    margin-top: 1px;
+}
+.jiage
+{
+    color:#B7B7B7;font-size:10px;
+    
+}
+.line{
+    background-color:#BBBBBB;
+    position: relative;
+    bottom: 10px;
+    }
+.addon
+{
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    }
+
+/*id区*/
+#headtitle{
+    font-family: title.ttf;
+    
+}
