@@ -1,34 +1,144 @@
 <!doctype html>
-<html> 
-	<head> 
-		<meta charset="UTF-8"> 
-		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"> 
-		<link href="style.css" rel="stylesheet"> 
-		<script src="index.js"></script> 
-	</head> 
-	<body> 
-		<header class="header"> 
-			<div id="head"> 
-				<img src="logo.png" width="30px" height="30px"> <span id="headtitle">三木角色仓库<img src="lj.png"></span> 
-			</div> 
-		</header> 
-		<div id="foods"> 
-			<div> <a href="ops.html"><img src="zw.png" id="sp"> <span class="jianjie"><img src="hot.gif" width="10px" height="10px">张纹</span></a> 
-			</div> 
-			<div> <a href="ops.html"><img src="dy.png" id="sp"> <span class="jianjie">大爷</span> </a> 
-			</div> 
-			<div> <a href="ops.html"><img src="小壮.png" id="sp"> <span class="jianjie">小壮</span> </a> 
-			</div> 
-			<div> <a href="ops.html"><img src="zwdeyifu.png" id="sp"><span class="jianjie">张衣服</span></a> 
-			</div> 
-			<div> <a href="ops.html"> <img src="MCoin.png" id="sp"><span class="jianjie">m币</span></a> 
-			</div> 
-			<div> <a href="ops.html"> <img src="彪汉.png" id="sp"> <span class="jianjie">张纹<span style="color: red;"> (限定）</span></span></a>
-			</div> 
-         <div> <a href="ops.html"> <img src="熊皮小壮.png" id="sp"><span class="jianjie">熊皮小壮</span></a> 
-			</div>
-         <div> <a href="html/ops.html"> <img src="背影.png" id="sp"><span class="jianjie">大哥</span></a> 
-			</div>
-		</div>  
-	</body>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QQSANQI · 自我介绍</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+  </head>
+  <body class="theme-light">
+    <div class="animated-surface" aria-hidden="true"></div>
+    <div class="container">
+      <header class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow">Modern Intro</p>
+          <h1 class="hero__title">你好，我是 QQSANQI</h1>
+          <p class="hero__subtitle">
+            我喜欢用 HTML 和 JavaScript 打造带着温度的页面，让交互、动效和故事感自然地融在一起。
+          </p>
+          <div class="hero__actions">
+            <button class="btn primary" id="themeToggle" type="button">切换夜间模式</button>
+            <button class="btn ghost" id="openVideo" type="button">播放 10s 视频</button>
+          </div>
+          <div class="hero__tags">
+            <span class="tag">Web 创作者</span>
+            <span class="tag">动效控</span>
+            <span class="tag">JS 玩家</span>
+          </div>
+        </div>
+        <div class="hero__panel">
+          <div class="glass status-card" id="statusCard" tabindex="0" role="button" aria-pressed="false">
+            <div class="status-header">
+              <div>
+                <div class="pill">今日心情 · coding in color</div>
+              </div>
+              <div class="pill">点击切换想法</div>
+            </div>
+            <p class="status-text" id="statusLine">让页面在细节里呼吸，让交互带来一点点惊喜。</p>
+            <div class="meter" data-progress="78">
+              <div class="meter__fill" id="focusMeter"></div>
+            </div>
+            <div class="stat-grid" aria-live="polite">
+              <div class="stat">
+                <span class="number" data-target="18">0</span>
+                <span class="label">微交互实验</span>
+              </div>
+              <div class="stat">
+                <span class="number" data-target="36">0</span>
+                <span class="label">界面草图</span>
+              </div>
+              <div class="stat">
+                <span class="number" data-target="108">0</span>
+                <span class="label">快乐敲击</span>
+              </div>
+            </div>
+          </div>
+          <div class="floating-badge">Hover / Click to play</div>
+        </div>
+      </header>
+
+      <main>
+        <section class="section" id="highlights">
+          <div class="section__header">
+            <p class="eyebrow">关于我</p>
+            <h2>我用代码讲故事</h2>
+            <p>挑选一个卡片，看看我最在意的关键词。</p>
+          </div>
+          <div class="card-grid" id="cardGrid">
+            <article class="glass feature-card active" data-focus="用动效叙事，让界面有温度" tabindex="0">
+              <h3>动效设计</h3>
+              <p>轻盈的动效可以引导注意力，也能建立节奏感。</p>
+            </article>
+            <article class="glass feature-card" data-focus="保持代码整洁，让想法持续演进" tabindex="0">
+              <h3>工程习惯</h3>
+              <p>命名、拆分、可读性，每一次 commit 都要稳。</p>
+            </article>
+            <article class="glass feature-card" data-focus="互动要真诚，反馈要即时" tabindex="0">
+              <h3>交互反馈</h3>
+              <p>按下、悬停、滚动，都应该有回应。</p>
+            </article>
+          </div>
+          <p id="focusMessage" class="status-text">用动效叙事，让界面有温度</p>
+        </section>
+
+        <section class="section" id="timeline">
+          <div class="section__header">
+            <p class="eyebrow">节奏</p>
+            <h2>最近在做的事</h2>
+            <p>保持好奇，用小实验累积灵感。</p>
+          </div>
+          <div class="timeline">
+            <article class="glass timeline-item">
+              <h4>微交互灵感库</h4>
+              <span>收集日常遇到的亮点动画，按情绪和场景分类。</span>
+            </article>
+            <article class="glass timeline-item">
+              <h4>个人品牌小站</h4>
+              <span>用轻量代码实现「光晕 + 玻璃」视觉，强调响应速度。</span>
+            </article>
+            <article class="glass timeline-item">
+              <h4>10 秒短视频记录</h4>
+              <span>把「瞬间」变成素材，随时用于动效实验。</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact" id="contact">
+          <div class="glass cta-card">
+            <p class="eyebrow">Say hi</p>
+            <h2>保持联络</h2>
+            <p class="status-text">
+              想聊想法、动效或任何有趣的网页实验？点下按钮给我一点反馈吧。
+            </p>
+            <div class="hero__actions">
+              <a class="btn primary" href="mailto:hello@qqlab.dev">邮件联系</a>
+              <a class="btn ghost" href="ops.html">作者页</a>
+            </div>
+          </div>
+          <div class="glass">
+            <p class="eyebrow">小偏好</p>
+            <ul>
+              <li>喜欢用动画解释复杂度</li>
+              <li>偏爱深色模式与玻璃态元素</li>
+              <li>期待让人「想再点一次」的交互</li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Made with HTML · CSS · JS · QQSANQI</p>
+      </footer>
+    </div>
+
+    <div class="modal hidden" id="videoModal" aria-hidden="true" role="dialog" aria-label="个人短视频">
+      <div class="modal__content">
+        <button class="icon-button" id="closeVideo" type="button" aria-label="关闭视频">×</button>
+        <video src="me.mp4" controls id="introVideo"></video>
+      </div>
+    </div>
+
+    <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
