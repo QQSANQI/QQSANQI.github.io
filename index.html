@@ -135,7 +135,15 @@
     <div class="modal hidden" id="videoModal" aria-hidden="true" role="dialog" aria-label="个人短视频">
       <div class="modal__content">
         <button class="icon-button" id="closeVideo" type="button" aria-label="关闭视频">×</button>
-        <video src="me.mp4" controls id="introVideo"></video>
+        <video src="me.mp4" controls id="introVideo">
+          <track
+            default
+            kind="captions"
+            srclang="zh"
+            label="中文字幕"
+            src="me_captions.vtt"
+          />
+        </video>
       </div>
     </div>
 

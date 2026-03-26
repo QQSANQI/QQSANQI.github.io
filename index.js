@@ -21,11 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   let ideaIndex = 0;
 
+  const MIN_PERCENTAGE = 0;
+  const MAX_PERCENTAGE = 100;
+
   const updateMeter = () => {
     if (!meter || !focusMeter) return;
     const percentage = Number(meter.dataset.progress || "78");
     requestAnimationFrame(() => {
-      focusMeter.style.width = `${Math.min(100, Math.max(0, percentage))}%`;
+      const clamped = Math.min(MAX_PERCENTAGE, Math.max(MIN_PERCENTAGE, percentage));
+      focusMeter.style.width = `${clamped}%`;
     });
   };
 
@@ -59,7 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!videoModal) return;
     videoModal.classList.remove("hidden");
     videoModal.setAttribute("aria-hidden", "false");
-    introVideo?.play().catch(() => {});
+    introVideo
+      ?.play()
+      .catch((error) => {
+        console.error("Video playback failed:", error);
+        showToast("视频自动播放失败，请手动播放");
+      });
   };
 
   const closeVideoModal = () => {
